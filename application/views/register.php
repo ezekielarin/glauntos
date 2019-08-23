@@ -6,7 +6,6 @@
 <body>
 <div>
 	<p>
-
 		<form method="post" action="">
 			<label>first name</label>
 			<input type="text" name="firstname"><br>
@@ -22,6 +21,10 @@
 			<input type="submit" name="register" value="signup">
 		</form>
 	</p>
+
+	<div>
+		<a href="login">Login</a>
+	</div>
 </div>
 </body>
 </html>
