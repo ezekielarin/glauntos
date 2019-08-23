@@ -60,8 +60,8 @@ class Auth extends CI_Controller {
 
 	public function register()
 	{
-		if (!$this->usermodel->islogged()) {
-			redirect('auth/login');
+		if ($this->usermodel->islogged()) {
+			redirect('auth');
 		}
 		if (isset($_POST['register'])) {
 
