@@ -26,10 +26,11 @@
       position: center;
       padding: 20px;
       align-content: center;
-      overflow: left;
+      overflow: right;
+      border: 300px;
 	}
 	.row{
-       border: 2px;
+       border: 100px;
 
 	}
 	.container .row{
