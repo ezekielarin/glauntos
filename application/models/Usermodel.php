@@ -32,7 +32,9 @@ class Usermodel extends CI_Model
 		);
 		$query = $this->db->insert('users',$user);
 		if ($query) {
-			return 1;
+       $email => $this->input->post('email'),  
+			$first_name => $this->input->post('firstname'), 
+			$this->sendmail($email,$first_name);
 		}
 		
 	}
@@ -115,6 +117,42 @@ class Usermodel extends CI_Model
 
 		$this->email->subject('Reset Password');
 		$this->email->message('Follow the link to reset your password'.$link);
+
+		$q = $this->email->send();
+		if ($q) {
+			return TRUE;
+		}
+	}
+
+	public function mailwelcome($email,$firstname)
+	{
+		$this->load->library('email');
+
+	  //send forgotten password reset link
+		$link = "<a href='/reset_password?rscd=".$fgcode."'>Reset</a>";
+		$data['email'] = $email;
+		$data['firstname'] = $firstname;
+
+	    // $config['protocol'] = 'smtp';
+	    // $config['smtp_host'] = 'smtp.gmail.com';
+	    // $config['smtp_user'] = 'glasscupenterprise@gmail.com';
+	    // $config['smtp_pass'] = 'shapiro7';
+	    // $config['smtp_port'] = '25';
+	    // $config['dsn'] = TRUE;
+	    $config['protocol'] = 'sendmail';
+		$config['mailpath'] = '/usr/sbin/sendmail';
+		$config['charset'] = 'iso-8859-1';
+		$config['wordwrap'] = TRUE;
+		$this->email->initialize($config);
+		
+
+		$this->email->from('auth@glasscup.com', 'Glass Cup Ent');
+		$this->email->to('ezekielarin@gmail.com');
+		//$this->email->cc('another@another-example.com');
+		$this->email->bcc('them@their-example.com');
+
+		$this->email->subject('Reset Password');
+		$this->email->message($this->load->view('email/welcome_ms',$data, TRUE));
 
 		$q = $this->email->send();
 		if ($q) {
