@@ -32,8 +32,8 @@ class Usermodel extends CI_Model
 		);
 		$query = $this->db->insert('users',$user);
 		if ($query) {
-       $email => $this->input->post('email'),  
-			$first_name => $this->input->post('firstname'), 
+       $email = $this->input->post('email');  
+			$first_name = $this->input->post('firstname');
 			$this->sendmail($email,$first_name);
 		}
 		
