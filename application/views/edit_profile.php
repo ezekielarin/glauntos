@@ -6,8 +6,8 @@
 </head>
 <body>
 <nav>
-	<a href="auth/change_password">change password</a>
-	<a href="auth/logout">logout</a>
+	<a href="change_password">change password</a>
+	<a href="logout">logout</a>
 </nav>
 <div>
 	<div>
