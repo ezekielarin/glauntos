@@ -20,11 +20,11 @@
 			</div>
 			<div>
 				<label>username <span><?php echo $username_error?></span></label>
-			    <input type="text" name="username" placeholder="username"><br>
+			    <input type="text" name="username" placeholder="Username"><br>
 			</div>	
 			<div>
 				<label>password</label>
-		    	<input type="text" name="password"><br>
+		    	<input type="text" name="password" placeholder="Password"><br>
 			</div>
 			<div>
 				<input type="submit" name="register" value="signup">
