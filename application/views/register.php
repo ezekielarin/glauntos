@@ -5,7 +5,6 @@
 </head>
 <body>
 <div>
-	<p>
 		<form method="post" action="">
 			<div>
 				<label>first name</label>
@@ -31,8 +30,6 @@
 				<input type="submit" name="register" value="signup">
 			</div>
 		</form>
-	</p>
-
 	<div>
 		<a href="login">Login</a>
 	</div>
