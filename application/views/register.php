@@ -11,17 +11,25 @@
 				<label>first name</label>
                 <input type="text" name="firstname"><br>
 			</div>
-			
-			<label>last name</label>
-			<input type="text" name="lastname"><br>
-			<label>email</label>
-			<input type="text" name="email"><br>
-			<label>username <span><?php echo $username_error?></span></label>
-
-			<input type="text" name="username"><br>
-			<label>password</label>
-			<input type="text" name="password"><br>
-			<input type="submit" name="register" value="signup">
+			<div>
+				<label>last name</label>
+		    	<input type="text" name="lastname"><br>
+			</div>
+			<div>
+				<label>email</label>
+			    <input type="text" name="email"><br>
+			</div>
+			<div>
+				<label>username <span><?php echo $username_error?></span></label>
+			    <input type="text" name="username"><br>
+			</div>	
+			<div>
+				<label>password</label>
+		    	<input type="text" name="password"><br>
+			</div>
+			<div>
+				<input type="submit" name="register" value="signup">
+			</div>
 		</form>
 	</p>
 
