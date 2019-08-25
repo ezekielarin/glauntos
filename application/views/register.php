@@ -15,7 +15,7 @@
 		    	<input type="text" name="lastname" placeholder=" Last Name"><br>
 			</div>
 			<div>
-				<label>email</label>
+				<label>email <span><?php echo $email_error?></span></label>
 			    <input type="text" name="email" placeholder="Email"><br>
 			</div>
 			<div>
