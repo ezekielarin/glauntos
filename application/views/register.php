@@ -8,19 +8,19 @@
 		<form method="post" action="">
 			<div>
 				<label>first name</label>
-                <input type="text" name="firstname"><br>
+                <input type="text" name="firstname" placeholder="First Name"><br>
 			</div>
 			<div>
 				<label>last name</label>
-		    	<input type="text" name="lastname"><br>
+		    	<input type="text" name="lastname" placeholder=" Last Name"><br>
 			</div>
 			<div>
 				<label>email</label>
-			    <input type="text" name="email"><br>
+			    <input type="text" name="email" placeholder="Email"><br>
 			</div>
 			<div>
 				<label>username <span><?php echo $username_error?></span></label>
-			    <input type="text" name="username"><br>
+			    <input type="text" name="username" placeholder="username"><br>
 			</div>	
 			<div>
 				<label>password</label>
