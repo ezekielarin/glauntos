@@ -69,6 +69,7 @@ class Auth extends CI_Controller {
 		  	$this->usermodel->createuser();
 		}
 		$data['username_error'] = '';
+		$data['email_error'] = '';
 		$this->load->view('register',$data);
 	}
 
