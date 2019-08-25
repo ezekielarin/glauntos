@@ -7,8 +7,11 @@
 <div>
 	<p>
 		<form method="post" action="">
-			<label>first name</label>
-			<input type="text" name="firstname"><br>
+			<div>
+				<label>first name</label>
+                <input type="text" name="firstname"><br>
+			</div>
+			
 			<label>last name</label>
 			<input type="text" name="lastname"><br>
 			<label>email</label>
