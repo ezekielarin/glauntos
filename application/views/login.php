@@ -21,22 +21,6 @@
 		<a href="register">Signup</a>
 	</div>
 </div>
-<style type="text/css">
-	.container{
-      position: center;
-      padding: 20px;
-      align-content: center;
-      overflow: right;
-      border: 300px;
-	}
-	.row{
-       border: 100px;
-
-	}
-	.container .row{
-
-	}
-</style>
 
 </body>
 </html>
