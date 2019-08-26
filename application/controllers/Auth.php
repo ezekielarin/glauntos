@@ -63,13 +63,16 @@ class Auth extends CI_Controller {
 		if ($this->usermodel->islogged()) {
 			redirect('auth');
 		}
+
+		$data['username_error'] = '';
+		$data['email_error'] = '';
 		if (isset($_POST['register'])) {
 
 			//start validation and save user
 		  	$this->usermodel->createuser();
 		}
-		$data['username_error'] = '';
-		$data['email_error'] = '';
+		
+
 		$this->load->view('register',$data);
 	}
 
