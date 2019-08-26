@@ -78,12 +78,6 @@ class Auth extends CI_Controller {
 
 	public function logout()
 	{
-		$data = array(
-			'email', 
-			'username', 
-			'loggedin'
-		);
-		$this->session->unset_userdata($data);
 		
 		redirect('/auth/login');
 		    
