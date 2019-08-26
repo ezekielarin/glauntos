@@ -78,7 +78,7 @@ class Auth extends CI_Controller {
 
 	public function logout()
 	{
-		
+		$this->usermodel->log_out();
 		redirect('/auth/login');
 		    
 	}
