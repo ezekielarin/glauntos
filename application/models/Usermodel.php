@@ -62,6 +62,17 @@ class Usermodel extends CI_Model
 		}
 	}
 
+	public function log_out()
+	{
+		$data = array(
+			'email', 
+			'username', 
+			'loggedin'
+		);
+		$this->session->unset_userdata($data);
+		
+	}
+
 	public function genuid($username)
 	{
 	   $uid = substr($username, 0,3);
