@@ -54,7 +54,8 @@ class Auth extends CI_Controller {
 		   
 
 		}
-		$ses = $this->session->userdata();
+		//$ses = $this->session->userdata();
+		// $this->output->cache(1); 
 		$this->load->view('login');
 	}
 
